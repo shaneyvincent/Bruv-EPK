@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruv EPK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Castoro', serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 3rem;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 20px;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .section {
+            width: 100%;
+            height: calc(100vh + 3rem); /* Adding the height of the navbar */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            overflow: hidden;
+        }
+        .section img {
+            width: auto;
+            height: calc(100vh * 11 / 8.5); /* Maintaining the 8.5 x 11 aspect ratio */
+        }
+        .content {
+            position: absolute;
+            width: 80%;
+            max-width: 850px;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content p a {
+            color: yellow; /* Change link color to yellow */
+            text-decoration: none;
+        }
+        .content p a:hover {
+            text-decoration: underline;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-decoration: underline; /* Underline and bold titles */
+        }
+        .social-media-content {
+            font-size: 0.7em; /* Make the text smaller */
+            text-align: center;
+            position: absolute;
+            top: 72%; /* Adjust this value to move the text up or down */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8.5in; /* Match the width of the background image */
+            color: white; /* White text */
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline around text */
+        }
+        .social-media-content p {
+            color: white; /* Ensure the text is white */
+        }
+        .social-media-content p a {
+            color: yellow; /* Change link color to yellow */
+        }
+        .scroll-box-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 0; /* Ensure the scroll boxes have padding from the top */
+        }
+        .scroll-box-wrapper {
+            width: 45%;
+        }
+        .scroll-box {
+            height: 350px;
+            overflow-y: auto;
+            color: black;
+            padding: 10px;
+            box-sizing: border-box;
+            scrollbar-width: thin; /* For Firefox */
+        }
+        .scroll-box::-webkit-scrollbar {
+            width: 8px; /* For Chrome, Safari, and Opera */
+        }
+        .scroll-box::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .box-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: white; /* Change title color to white */
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7); /* Ensure title is always visible */
+        }
+        .link-section {
+            margin-bottom: 20px;
+        }
+        .thumbnail {
+            display: block;
+            margin: 0 auto 10px;
+        }
+        @media (max-width: 768px) {
+            .navbar a {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+            .content {
+                padding: 10px;
+            }
+            .social-media-content {
+                width: 90%;
+                top: 50%; /* Adjust this value for mobile view */
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .scroll-box-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .scroll-box-wrapper {
+                width: 90%;
+            }
+            .scroll-box {
+                height: auto;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#section1">Bruv EPK</a>
+        <a href="#section2">Bio</a>
+        <a href="#section3">Latest Releases/Mixes</a>
+        <a href="#section4">Social Media</a>
+        <a href="#section5">Contact Info</a>
+    </div>
+
+    <div id="section1" class="section">
+        <img src="epk page 1.png" alt="Bruv EPK">
+        <div class="content">
+    
+            <p>Welcome to the Bruv EPK.</p>
+        </div>
+    </div>
+    <div id="section2" class="section">
+        <img src="epk page 2.png" alt="Bio">
+        <div class="content">
+        
+        </div>
+    </div>
+    <div id="section3" class="section">
+        <div class="content scroll-box-container">
+            <div class="scroll-box-wrapper">
+                <div class="box-title">Latest Releases</div>
+                <div class="scroll-box left-box">
+                    <div class="link-section">
+                        <img src="bedhitsthumbnail.jpg" class="thumbnail">
+                        <p>Los Negros - Bedhits (Soul Clap Records)<br>from Summer Edits by Los Negros<br><a href="https://soulclaprecords.bandcamp.com/track/los-negros-bedhits">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="gardeningthumbnail.jpg" class="thumbnail">
+                        <p>Soul Clap - Gardening feat. Life on Planets (Bruv Remix) (Fool's Gold Records)<br>from WTF: Transformed & Remixed by Soul Clap<br><a href="https://soulclap.bandcamp.com/track/gardening-feat-life-on-planets-bruv-remix">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="sicknessthumbnail.jpg" class="thumbnail">
+                        <p>Lonely C - Sickness 4 Your Thickness (Shaney's Mix) (Soul Clap Records)<br>from Charles & Tribulations Remixes by Lonely C<br><a href="https://lonelyc.bandcamp.com/track/sickness-4-your-thickness-shaneys-mix">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="summeredits.jpg" class="thumbnail">
+                        <p>Summer Edits Part 1 by Los Negros<br><a href="https://losnegrosmusic.bandcamp.com/album/summer-edits-part-1">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="summeredits2.jpg" class="thumbnail">
+                        <p>Summer Edits Part 2 by Los Negros<br><a href="https://losnegrosmusic.bandcamp.com/album/summer-edits-part-2">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="summereditsdos.jpg" class="thumbnail">
+                        <p>Summer Edits Dos (Los Negros)<br><a href="https://losnegrosmusic.bandcamp.com/album/summer-edits-dos">Listen Here</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-box-wrapper">
+                <div class="box-title">Mixes</div>
+                <div class="scroll-box right-box">
+                    <div class="link-section">
+                        <img src="1800mix.jpg" class="thumbnail">
+                        <p>Scooch Aug 11, 2018 (1-800 Lucky)<br><a href="https://www.mixcloud.com/LosNegrosMusic/scooch-aug-11-2018-1-800-lucky/">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="uglygirlshatehouse.png" class="thumbnail">
+                        <p>Ugly Girls Hate House<br><a href="https://soundcloud.com/shaneyshanevincent/ugly-girls-hate-house">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="12302018scoochmix.jpg" class="thumbnail">
+                        <p>Scooch 12-30-2018 FSQ & DJ Ray (1-800 Lucky)<br><a href="https://www.mixcloud.com/LosNegrosMusic/scooch-12-30-2018-fsq-dj-ray-dan-gore/">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="scoocharremermix.jpg" class="thumbnail">
+                        <p>Scooch 12-23-2018 Los Negros & Arremer Jack (1-800 Lucky)<br><a href="https://www.mixcloud.com/LosNegrosMusic/scooch-12-23-2018-los-negros-arremer-jack-darelectric-at-1-800-lucky-records-miami/">Listen Here</a></p>
+                    </div>
+                    <div class="link-section">
+                        <img src="1800luckyscoochmix.jpg" class="thumbnail">
+                        <p>Scooch 12-02-2018 Los Negros & Patrick Walsh (1-800 Lucky)<br><a href="https://www.mixcloud.com/LosNegrosMusic/scooch-12-02-2018-los-negros-x-patrick-walsh-at-1-800-lucky/">Listen Here</a></p>
+                    </div>
+
+                    <div class="link-section">
+                        <img src="secretgardenthumbnail.png" class="thumbnail">
+                        <p>Secret Garden Spring Mix<br><a href="https://soundcloud.com/sicmusic/los-negros-secret-garden-spring-mix">Listen Here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section4" class="section">
+        <img src="epk page 3.png" alt="Social Media">
+        <div class="scroll-box social-media-content" style="background: none;">
+            <div class="link-section">
+                <p class="title">Instagram</p>
+                <p style="color: white;">Bruv Instagram: <a href="https://www.instagram.com/00bruv/" style="color: yellow;">00Bruv</a></p>
+                <p style="color: white;">Los Negros Instagram: <a href="https://www.instagram.com/losnegrosmusic" style="color: yellow;">LosNegrosMusic</a></p>
+                <p style="color: white;">Personal Instagram: <a href="https://www.instagram.com/shaneyshanevincent/" style="color: yellow;">Shaney Instagram</a></p>
+                <p class="title">YouTube</p>
+                <p style="color: white;">Los Negros On YouTube: <a href="https://www.youtube.com/@LosNegrosMusic" style="color: yellow;">LosNegrosMusic</a></p>
+                <p style="color: white;">Summer Edits Playlist on Youtube: <a href="https://www.youtube.com/playlist?list=PLqxW6QHr5AdPtVimMPcfdHS4x03fgVmqC" style="color: yellow;">Summer Edits</a></p>
+                <p style="color: white;">Summer Edits Dos Playlist on Youtube: <a href="https://www.youtube.com/playlist?list=PLqxW6QHr5AdP4CZZsFIa341lNgPb1zjuk" style="color: yellow;">Summer Edits Dos</a></p>
+                <p class="title">SoundCloud</p>
+                <p style="color: white;">Los Negros Music on SoundCloud: <a href="https://soundcloud.com/losnegrosmusic/tracks" style="color: yellow;">LosNegrosMusic</a></p>
+                <p style="color: white;">Bruv on SoundCloud: <a href="https://soundcloud.com/shaneyshanevincent" style="color: yellow;">Bruv Soundcloud</a></p>
+                <p class="title">Mixcloud</p>
+                <p style="color: white;">Los Negros on Mixcloud: <a href="https://www.mixcloud.com/LosNegrosMusic/" style="color: yellow;">LosNegrosMusic</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="section5" class="section">
+        <img src="epk page 4.png" alt="Contact Info">
+        <div class="content" style="top: 65%;">
+            <p>Email: 00bruvmusic@gmail.com</p>
+            <p>Phone: 954 451 8367</p>
+            <p>Instagram: <a href="https://www.instagram.com/00bruv/">Bruv</a></p>
+        </div>
+    </div>
+
+    <script>
+        function adjustSectionHeight() {
+            const sections = document.querySelectorAll('.section img');
+            sections.forEach(section => {
+                const aspectRatio = 11 / 8.5;
+                const windowAspectRatio = window.innerHeight / window.innerWidth;
+                if (windowAspectRatio < aspectRatio) {
+                    section.style.height = 'calc(100vh - 3rem)';
+                    section.style.width = 'auto';
+                } else {
+                    section.style.height = 'auto';
+                    section.style.width = '100vw';
+                }
+            });
+        }
+
+        function adjustThumbnailSize() {
+            const scrollBoxes = document.querySelectorAll('.scroll-box');
+            scrollBoxes.forEach(scrollBox => {
+                const thumbnails = scrollBox.querySelectorAll('.thumbnail');
+                const newSize = scrollBox.clientWidth * 0.9; // Width of the scroll box minus a small dynamic margin
+                thumbnails.forEach(thumbnail => {
+                    thumbnail.style.width = `${newSize}px`;
+                    thumbnail.style.height = `${newSize}px`;
+                });
+            });
+        }
+
+        window.addEventListener('resize', () => {
+            adjustSectionHeight();
+            adjustThumbnailSize();
+        });
+
+        window.addEventListener('load', () => {
+            adjustSectionHeight();
+            adjustThumbnailSize();
+        });
+    </script>
+</body>
+</html>
