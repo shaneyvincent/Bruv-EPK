@@ -38,7 +38,7 @@
         }
         .section {
             width: 100%;
-            height: calc(100vh + 3rem); /* Adding the height of the navbar */
+            height: calc(100vh + 3rem);
             position: relative;
             display: flex;
             justify-content: center;
@@ -48,7 +48,7 @@
         }
         .section img {
             width: auto;
-            height: calc(100vh * 11 / 8.5); /* Maintaining the 8.5 x 11 aspect ratio */
+            height: calc(100vh * 11 / 8.5);
         }
         .content {
             position: absolute;
@@ -60,7 +60,7 @@
             box-sizing: border-box;
         }
         .content p a {
-            color: yellow; /* Change link color to yellow */
+            color: yellow;
             text-decoration: none;
         }
         .content p a:hover {
@@ -70,30 +70,30 @@
             font-weight: bold;
             font-size: 1.2em;
             margin-top: 20px;
-            text-decoration: underline; /* Underline and bold titles */
+            text-decoration: underline;
         }
         .social-media-content {
-            font-size: 0.7em; /* Make the text smaller */
+            font-size: 0.7em;
             text-align: center;
             position: absolute;
-            top: 72%; /* Adjust this value to move the text up or down */
+            top: 72%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 8.5in; /* Match the width of the background image */
-            color: white; /* White text */
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline around text */
+            width: 8.5in;
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
         .social-media-content p {
-            color: white; /* Ensure the text is white */
+            color: white;
         }
         .social-media-content p a {
-            color: yellow; /* Change link color to yellow */
+            color: yellow;
         }
         .scroll-box-container {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            padding: 20px 0; /* Ensure the scroll boxes have padding from the top */
+            padding: 20px 0;
         }
         .scroll-box-wrapper {
             width: 45%;
@@ -104,10 +104,11 @@
             color: black;
             padding: 10px;
             box-sizing: border-box;
-            scrollbar-width: thin; /* For Firefox */
+            scrollbar-width: thin;
+            -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
         }
         .scroll-box::-webkit-scrollbar {
-            width: 8px; /* For Chrome, Safari, and Opera */
+            width: 8px;
         }
         .scroll-box::-webkit-scrollbar-thumb {
             background-color: rgba(0, 0, 0, 0.5);
@@ -116,9 +117,9 @@
             font-weight: bold;
             text-align: center;
             margin-bottom: 10px;
-            color: white; /* Change title color to white */
+            color: white;
             padding: 10px;
-            background: rgba(0, 0, 0, 0.7); /* Ensure title is always visible */
+            background: rgba(0, 0, 0, 0.7);
         }
         .link-section {
             margin-bottom: 20px;
@@ -137,7 +138,7 @@
             }
             .social-media-content {
                 width: 90%;
-                top: 50%; /* Adjust this value for mobile view */
+                top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
@@ -167,14 +168,13 @@
     <div id="section1" class="section">
         <img src="epk page 1.png" alt="Bruv EPK">
         <div class="content">
-    
             <p>Welcome to the Bruv EPK.</p>
         </div>
     </div>
     <div id="section2" class="section">
         <img src="epk page 2.png" alt="Bio">
         <div class="content">
-        
+            <!-- Add your content for Bio here -->
         </div>
     </div>
     <div id="section3" class="section">
