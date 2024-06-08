@@ -106,6 +106,7 @@
             box-sizing: border-box;
             scrollbar-width: thin; /* For Firefox */
             -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
+            touch-action: auto; /* Ensure touch scrolling is enabled */
         }
         .scroll-box::-webkit-scrollbar {
             width: 8px; /* For Chrome, Safari, and Opera */
@@ -168,13 +169,13 @@
     <div id="section1" class="section">
         <img src="epk page 1.png" alt="Bruv EPK">
         <div class="content">
-            
+          
         </div>
     </div>
     <div id="section2" class="section">
         <img src="epk page 2.png" alt="Bio">
         <div class="content">
-          
+           
         </div>
     </div>
     <div id="section3" class="section">
@@ -305,6 +306,15 @@
         window.addEventListener('load', () => {
             adjustSectionHeight();
             adjustThumbnailSize();
+        });
+
+        document.querySelectorAll('.scroll-box').forEach(box => {
+            box.addEventListener('touchstart', (e) => {
+                e.target.ontouchmove = function (event) {
+                    box.scrollTop -= event.touches[0].pageY - box.scrollTop;
+                    event.preventDefault();
+                };
+            });
         });
     </script>
 </body>
