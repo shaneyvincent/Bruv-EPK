@@ -14,6 +14,7 @@
             font-family: 'Castoro', serif;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
         }
         .navbar {
             position: fixed;
@@ -106,7 +107,6 @@
             box-sizing: border-box;
             scrollbar-width: thin; /* For Firefox */
             -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
-            touch-action: auto; /* Ensure touch scrolling is enabled */
         }
         .scroll-box::-webkit-scrollbar {
             width: 8px; /* For Chrome, Safari, and Opera */
@@ -169,13 +169,13 @@
     <div id="section1" class="section">
         <img src="epk page 1.png" alt="Bruv EPK">
         <div class="content">
-          
+            <p>Welcome to the Bruv EPK.</p>
         </div>
     </div>
     <div id="section2" class="section">
         <img src="epk page 2.png" alt="Bio">
         <div class="content">
-           
+            <!-- Add your content for Bio here -->
         </div>
     </div>
     <div id="section3" class="section">
@@ -310,10 +310,12 @@
 
         document.querySelectorAll('.scroll-box').forEach(box => {
             box.addEventListener('touchstart', (e) => {
-                e.target.ontouchmove = function (event) {
-                    box.scrollTop -= event.touches[0].pageY - box.scrollTop;
-                    event.preventDefault();
-                };
+                const startY = e.touches[0].pageY;
+                let scrollTop = box.scrollTop;
+                box.addEventListener('touchmove', (event) => {
+                    const deltaY = event.touches[0].pageY - startY;
+                    box.scrollTop = scrollTop - deltaY;
+                }, { passive: true });
             });
         });
     </script>
